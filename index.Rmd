@@ -3,10 +3,14 @@ title: "Title of My Final Project"
 description: |
   This is where I will describe my final project.
 site: distill::distill_website
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(ggthemes)
 
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
@@ -14,5 +18,15 @@ knitr::opts_chunk$set(echo = FALSE)
 # Learn more about publishing to GitHub Pages at:
 # https://rstudio.github.io/distill/publish_website.html#github-pages
 
+```
+
+```{r car-plot}
+mtcars%>%
+select(mpg, wt)%>%
+ggplot(aes(x = wt, y = mpg)) + 
+geom_point() + 
+geom_smooth(method = "lm", formula = y~x, se = FALSE) + 
+theme_clean() + 
+labs(title = "Fuel Efficiency", subtitle = "Heavier Cars are Less Efficient", x = "Weight", y = "MPG", caption = "Data")
 ```
 

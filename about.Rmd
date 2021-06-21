@@ -8,3 +8,15 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## About Me
+
+I am going to be a junior in Aurora, IL
+
+## About the Project
+
+This is a graph showing that heavier cars are less efficient. It is called *My project*.
+
+"This is data science"  
+~ Preceptor
+
+[Kane’s Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/)
